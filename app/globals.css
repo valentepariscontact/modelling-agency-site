@@ -2,25 +2,115 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+  --marine-blue: #001f3f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-marine-blue: var(--marine-blue);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground font-sans leading-relaxed;
+  text-rendering: geometricPrecision;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif leading-[0.95] tracking-tight;
+  color: var(--marine-blue);
+}
+
+p,
+li,
+dd,
+dt,
+input,
+textarea,
+button,
+a {
+  @apply font-sans;
+}
+
+.brand-font {
+  font-family: var(--font-brand), serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 900ms ease, transform 900ms ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-cue {
+  animation: cueFloat 2.6s ease-in-out infinite;
+}
+
+@keyframes cueFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.86;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-section,
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-cue {
+    animation: none;
+  }
+}
+.form-input-marine {
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px solid rgba(0, 31, 63, 0.2);
+  padding: 0.75rem 0;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #001F3F;
+}
+
+.form-input-marine:focus {
+  border-bottom-color: #001F3F;
+}
+
+.form-input-marine::placeholder {
+  color: rgba(0, 31, 63, 0.4);
+}
+.form-input-marine {
+  @apply w-full bg-transparent border-b border-[#001F3F]/20 py-3 text-[10px] tracking-widest focus:border-[#001F3F] outline-none transition-colors placeholder:text-[#001F3F]/40 uppercase;
+}
+
+/* Custom styles for the file input appearance */
+input[type="file"]::file-selector-button {
+  @apply hidden;
 }
