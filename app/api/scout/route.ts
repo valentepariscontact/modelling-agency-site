@@ -16,10 +16,10 @@ async function uploadToCloudinary(file: File, filename: string): Promise<string>
   const base64 = buffer.toString("base64");
   const dataUri = `data:${file.type};base64,${base64}`;
   const result = await cloudinary.uploader.upload(dataUri, {
-    folder: "scout-applications",
-    resource_type: "image",
-    public_id: filename.replace(/\.[^/.]+$/, ""),
-  });
+  folder: "scout-applications",
+  resource_type: "image",
+  public_id: filename.replace(/\.[^/.]+$/, "").replace(/[^a-zA-Z0-9_-]/g, "_"),
+});
   return result.secure_url;
 }
 
