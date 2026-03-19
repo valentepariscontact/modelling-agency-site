@@ -7,10 +7,10 @@ export default function AboutPage() {
 
       {/* ── Header ── */}
       <ScrollFadeIn className="mb-20 border-b border-[#001F3F]/10 pb-16 md:mb-28 md:pb-20">
-        <p className="mb-5 text-[0.58rem] uppercase tracking-[0.5em] text-[#001F3F]/40">
+        <p className="mb-5 text-[0.65rem] uppercase tracking-[0.5em] text-[#001F3F]/60">
           About
         </p>
-        <h1 className="max-w-3xl font-sans text-3xl font-light leading-tight tracking-[0.15em] uppercase text-[#001F3F] md:text-4xl">
+        <h1 className="max-w-3xl font-sans text-2xl font-light leading-tight tracking-[0.15em] uppercase text-[#001F3F] md:text-3xl">
           A different kind of agency.
         </h1>
       </ScrollFadeIn>
@@ -18,19 +18,19 @@ export default function AboutPage() {
       {/* ── Story ── */}
       <ScrollFadeIn className="mb-24 grid grid-cols-1 gap-16 md:mb-32 md:grid-cols-2 md:gap-24" delay={100}>
         <div>
-          <p className="mb-8 text-[0.58rem] uppercase tracking-[0.4em] text-[#001F3F]/40">
+          <p className="mb-6 text-[0.65rem] uppercase tracking-[0.4em] text-[#001F3F]/60">
             Who We Are
           </p>
-          <p className="text-sm leading-8 text-[#001F3F]/70">
+          <p className="text-sm leading-8 text-[#001F3F]">
             Valenté was founded in Paris in 2025. We represent a carefully selected
             roster of models and talent across runway, editorial, and campaign work.
           </p>
         </div>
         <div>
-          <p className="mb-8 text-[0.58rem] uppercase tracking-[0.4em] text-[#001F3F]/40">
+          <p className="mb-6 text-[0.65rem] uppercase tracking-[0.4em] text-[#001F3F]/60">
             Why We Exist
           </p>
-          <p className="text-sm leading-8 text-[#001F3F]/70">
+          <p className="text-sm leading-8 text-[#001F3F]">
             The fashion industry asks a great deal from the people who power it,
             while offering little in return. We built Valenté to change that — with
             honest representation, fair practices, and genuine long-term investment
@@ -41,7 +41,7 @@ export default function AboutPage() {
 
       {/* ── Values ── */}
       <ScrollFadeIn className="mb-24 md:mb-32" delay={140}>
-        <p className="mb-12 text-[0.58rem] uppercase tracking-[0.4em] text-[#001F3F]/40">
+        <p className="mb-12 text-[0.65rem] uppercase tracking-[0.4em] text-[#001F3F]/60">
           Our Commitments
         </p>
         <div className="grid grid-cols-1 divide-y divide-[#001F3F]/10 border-y border-[#001F3F]/10 md:grid-cols-3 md:divide-x md:divide-y-0">
@@ -63,7 +63,7 @@ export default function AboutPage() {
               <h3 className="mb-5 text-[0.65rem] uppercase tracking-[0.3em] text-[#001F3F]">
                 {v.title}
               </h3>
-              <p className="text-sm leading-7 text-[#001F3F]/55">{v.body}</p>
+              <p className="text-sm leading-7 text-[#001F3F]">{v.body}</p>
             </div>
           ))}
         </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
 
       {/* ── Statement ── */}
       <ScrollFadeIn className="mb-24 border-l-2 border-[#001F3F] pl-8 md:mb-32 md:pl-12" delay={160}>
-        <p className="max-w-2xl text-lg font-light leading-9 text-[#001F3F] md:text-2xl md:leading-10">
+        <p className="max-w-2xl text-base font-light leading-9 text-[#001F3F] md:text-lg md:leading-10">
           We believe the industry works better when agencies take responsibility
           for the people they represent — not just the bookings they generate.
         </p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
         </Link>
         <Link
           href="/contact"
-          className="text-[10px] uppercase tracking-[0.3em] text-[#001F3F]/40 underline underline-offset-4 hover:text-[#001F3F] transition-colors"
+          className="text-[10px] uppercase tracking-[0.3em] text-[#001F3F]/60 underline underline-offset-4 hover:text-[#001F3F] transition-colors"
         >
           Contact
         </Link>
