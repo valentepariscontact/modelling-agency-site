@@ -10,7 +10,7 @@ export default function AboutPage() {
         <p className="mb-5 text-[0.58rem] uppercase tracking-[0.5em] text-[#001F3F]/40">
           About
         </p>
-        <h1 className="max-w-3xl font-brand text-5xl font-light leading-tight text-[#001F3F] md:text-7xl">
+        <h1 className="max-w-3xl font-sans text-3xl font-light leading-tight tracking-[0.15em] uppercase text-[#001F3F] md:text-4xl">
           A different kind of agency.
         </h1>
       </ScrollFadeIn>
