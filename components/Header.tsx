@@ -7,6 +7,7 @@ import SearchDropdown from "@/components/SearchDropdown";
 
 const navLinks = [
   { href: "/about", label: "ABOUT US" },
+  { href: "/#get-scouted", label: "JOIN US" },
 ];
 
 export default function Header() {
