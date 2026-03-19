@@ -1,148 +1,96 @@
 import ScrollFadeIn from "@/components/ScrollFadeIn";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="flex w-full flex-col gap-0 pb-16 pt-0">
+    <main className="flex w-full flex-col pb-24 pt-16 md:pt-24">
 
-      {/* ── Hero ── */}
-      <ScrollFadeIn className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
-        <div
-          className="h-[70vh] min-h-[480px] w-full bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=2400&q=80')",
-          }}
-          aria-label="Valenté Paris"
-          role="img"
-        >
-          <div className="flex h-full w-full flex-col items-center justify-end bg-gradient-to-t from-black/60 via-black/10 to-transparent pb-16 text-center">
-            <p className="mb-3 text-[0.6rem] uppercase tracking-[0.5em] text-white/70">
-              Paris, 2025
-            </p>
-            <h1 className="font-brand text-5xl italic text-white md:text-8xl">
-              Valenté
-            </h1>
-          </div>
-        </div>
-      </ScrollFadeIn>
-
-      {/* ── Intro ── */}
-      <ScrollFadeIn className="mx-auto max-w-3xl px-4 py-20 text-center" delay={100}>
-        <p className="mb-6 text-[0.62rem] uppercase tracking-[0.4em] text-[#001F3F]/50">
+      {/* ── Header ── */}
+      <ScrollFadeIn className="mb-20 border-b border-[#001F3F]/10 pb-16 md:mb-28 md:pb-20">
+        <p className="mb-5 text-[0.58rem] uppercase tracking-[0.5em] text-[#001F3F]/40">
           About
         </p>
-        <p className="font-brand text-3xl font-light leading-relaxed text-[#001F3F] md:text-4xl">
-          "An agency built on care, in an industry that often forgets to."
-        </p>
+        <h1 className="max-w-3xl font-brand text-5xl font-light leading-tight text-[#001F3F] md:text-7xl">
+          A different kind of agency.
+        </h1>
       </ScrollFadeIn>
 
-      {/* ── Story + Image ── */}
-      <ScrollFadeIn className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#F9F9F9]" delay={120}>
-        <div className="mx-auto grid max-w-[1560px] grid-cols-1 gap-0 md:grid-cols-2">
-          <div className="flex flex-col justify-center px-8 py-16 md:px-16 md:py-24">
-            <p className="mb-6 text-[0.62rem] uppercase tracking-[0.4em] text-[#001F3F]/40">
-              Our Story
-            </p>
-            <h2 className="mb-8 font-brand text-4xl font-light leading-tight text-[#001F3F] md:text-5xl">
-              Founded in Paris.<br />Built differently.
-            </h2>
-            <div className="space-y-5 text-sm leading-8 text-[#001F3F]/70">
-              <p>
-                Valenté was born in 2025 from a simple conviction — that the fashion
-                industry, for all its beauty, has long failed the people who make it
-                possible. We set out to change that, one model at a time.
-              </p>
-              <p>
-                Based in Paris, we represent a carefully selected roster of models
-                and talent. We believe in long-term development over short-term gain,
-                in honest relationships over transactional ones, and in protecting
-                the people we work with at every stage of their career.
-              </p>
-              <p>
-                In an industry that moves fast and asks a lot, we slow down enough
-                to do it right.
-              </p>
-            </div>
-          </div>
-          <div
-            className="min-h-[480px] bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1600&q=80')",
-            }}
-          />
+      {/* ── Story ── */}
+      <ScrollFadeIn className="mb-24 grid grid-cols-1 gap-16 md:mb-32 md:grid-cols-2 md:gap-24" delay={100}>
+        <div>
+          <p className="mb-8 text-[0.58rem] uppercase tracking-[0.4em] text-[#001F3F]/40">
+            Who We Are
+          </p>
+          <p className="text-sm leading-8 text-[#001F3F]/70">
+            Valenté was founded in Paris in 2025. We represent a carefully selected
+            roster of models and talent across runway, editorial, and campaign work.
+          </p>
+        </div>
+        <div>
+          <p className="mb-8 text-[0.58rem] uppercase tracking-[0.4em] text-[#001F3F]/40">
+            Why We Exist
+          </p>
+          <p className="text-sm leading-8 text-[#001F3F]/70">
+            The fashion industry asks a great deal from the people who power it,
+            while offering little in return. We built Valenté to change that — with
+            honest representation, fair practices, and genuine long-term investment
+            in every person we work with.
+          </p>
         </div>
       </ScrollFadeIn>
 
       {/* ── Values ── */}
-      <ScrollFadeIn className="mx-auto w-full max-w-[1560px] px-4 py-20 md:px-8 lg:px-10" delay={140}>
-        <p className="mb-12 text-center text-[0.62rem] uppercase tracking-[0.4em] text-[#001F3F]/40">
-          What We Stand For
+      <ScrollFadeIn className="mb-24 md:mb-32" delay={140}>
+        <p className="mb-12 text-[0.58rem] uppercase tracking-[0.4em] text-[#001F3F]/40">
+          Our Commitments
         </p>
-        <div className="grid grid-cols-1 gap-px border border-[#001F3F]/10 md:grid-cols-3">
+        <div className="grid grid-cols-1 divide-y divide-[#001F3F]/10 border-y border-[#001F3F]/10 md:grid-cols-3 md:divide-x md:divide-y-0">
           {[
             {
-              title: "Care First",
-              body: "We prioritize the wellbeing of our talent above all else. Mental health, fair conditions, and honest communication are non-negotiable.",
+              title: "Wellbeing First",
+              body: "The mental and physical health of our talent is not secondary to business. It is the foundation of everything we do.",
             },
             {
-              title: "Long-Term Vision",
-              body: "We build careers, not moments. Every decision we make is guided by what's best for our talent over the long run.",
+              title: "Long-Term Careers",
+              body: "We are not interested in short-term volume. We build carefully, with every decision made in the interest of sustainable careers.",
             },
             {
-              title: "Radical Transparency",
-              body: "No hidden fees, no fine print, no surprises. We believe our talent deserves to understand exactly how this industry works.",
+              title: "Full Transparency",
+              body: "Every contract, every fee, every opportunity is discussed openly. Our talent understands exactly what they are agreeing to.",
             },
           ].map((v) => (
-            <div key={v.title} className="flex flex-col gap-4 p-8 md:p-10">
-              <h3 className="text-[0.7rem] uppercase tracking-[0.3em] text-[#001F3F]">
+            <div key={v.title} className="py-10 md:px-10 md:first:pl-0 md:last:pr-0">
+              <h3 className="mb-5 text-[0.65rem] uppercase tracking-[0.3em] text-[#001F3F]">
                 {v.title}
               </h3>
-              <p className="text-sm leading-7 text-[#001F3F]/60">{v.body}</p>
+              <p className="text-sm leading-7 text-[#001F3F]/55">{v.body}</p>
             </div>
           ))}
         </div>
       </ScrollFadeIn>
 
-      {/* ── Image grid ── */}
-      <ScrollFadeIn className="relative left-1/2 right-1/2 -mx-[50vw] w-screen" delay={160}>
-        <div className="grid grid-cols-2 md:grid-cols-4">
-          {[
-            "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80",
-          ].map((url, i) => (
-            <div
-              key={i}
-              className="aspect-[3/4] bg-cover bg-center grayscale transition-all duration-700 hover:grayscale-0"
-              style={{ backgroundImage: `url('${url}')` }}
-            />
-          ))}
-        </div>
+      {/* ── Statement ── */}
+      <ScrollFadeIn className="mb-24 border-l-2 border-[#001F3F] pl-8 md:mb-32 md:pl-12" delay={160}>
+        <p className="max-w-2xl text-lg font-light leading-9 text-[#001F3F] md:text-2xl md:leading-10">
+          We believe the industry works better when agencies take responsibility
+          for the people they represent — not just the bookings they generate.
+        </p>
       </ScrollFadeIn>
 
-      {/* ── Closing statement ── */}
-      <ScrollFadeIn className="mx-auto max-w-2xl px-4 py-24 text-center" delay={180}>
-        <p className="text-sm leading-8 text-[#001F3F]/60 md:text-base md:leading-9">
-          If you are a model or talent looking for representation that actually
-          looks out for you — or a client looking for an agency that takes quality
-          and ethics seriously — we would love to hear from you.
-        </p>
-        <div className="mt-10 flex flex-col items-center gap-3">
-          <a
-            href="/apply"
-            className="border border-[#001F3F] px-10 py-4 text-[10px] uppercase tracking-[0.3em] text-[#001F3F] transition-all duration-500 hover:bg-[#001F3F] hover:text-white"
-          >
-            Apply to Join
-          </a>
-          <a
-            href="/contact"
-            className="text-[10px] uppercase tracking-[0.3em] text-[#001F3F]/40 underline underline-offset-4 hover:text-[#001F3F]"
-          >
-            Contact Us
-          </a>
-        </div>
+      {/* ── CTA ── */}
+      <ScrollFadeIn className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8" delay={180}>
+        <Link
+          href="/#get-scouted"
+          className="inline-block border border-[#001F3F] px-10 py-4 text-[10px] uppercase tracking-[0.3em] text-[#001F3F] transition-all duration-500 hover:bg-[#001F3F] hover:text-white"
+        >
+          Join Us
+        </Link>
+        <Link
+          href="/contact"
+          className="text-[10px] uppercase tracking-[0.3em] text-[#001F3F]/40 underline underline-offset-4 hover:text-[#001F3F] transition-colors"
+        >
+          Contact
+        </Link>
       </ScrollFadeIn>
 
     </main>
