@@ -6,10 +6,10 @@ export default function EthicsPage() {
 
       {/* ── Header ── */}
       <ScrollFadeIn className="mb-20 border-b border-[#001F3F] pb-16 md:mb-28 md:pb-20">
-        <p className="mb-5 text-[0.65rem] font-semibold uppercase tracking-[0.5em] text-[#001F3F]">
+        <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
           Ethics
         </p>
-        <h1 className="max-w-3xl font-sans text-xl font-medium leading-tight tracking-[0.2em] uppercase text-[#001F3F] md:text-2xl">
+        <h1 className="max-w-3xl font-sans text-2xl font-semibold leading-tight tracking-[0.1em] uppercase text-[#001F3F] md:text-3xl">
           Our Code of Ethics
         </h1>
         <p className="mt-6 max-w-xl text-sm leading-8 text-[#001F3F]">
@@ -21,7 +21,7 @@ export default function EthicsPage() {
       <div className="mx-auto w-full max-w-3xl space-y-20">
 
         <ScrollFadeIn className="space-y-6" delay={100}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Respect & Dignity
           </h2>
           <p className="text-sm leading-8 text-[#001F3F]">
@@ -35,7 +35,7 @@ export default function EthicsPage() {
         <div className="border-t border-[#001F3F]/10" />
 
         <ScrollFadeIn className="space-y-6" delay={110}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Physical & Mental Wellbeing
           </h2>
           <p className="text-sm leading-8 text-[#001F3F]">
@@ -49,7 +49,7 @@ export default function EthicsPage() {
         <div className="border-t border-[#001F3F]/10" />
 
         <ScrollFadeIn className="space-y-6" delay={120}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Transparency in All Matters
           </h2>
           <p className="text-sm leading-8 text-[#001F3F]">
@@ -63,7 +63,7 @@ export default function EthicsPage() {
         <div className="border-t border-[#001F3F]/10" />
 
         <ScrollFadeIn className="space-y-6" delay={130}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             The Right to Decline
           </h2>
           <p className="text-sm leading-8 text-[#001F3F]">
@@ -76,7 +76,23 @@ export default function EthicsPage() {
         <div className="border-t border-[#001F3F]/10" />
 
         <ScrollFadeIn className="space-y-6" delay={140}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
+            Protection of Minors
+          </h2>
+          <p className="text-sm leading-8 text-[#001F3F]">
+            Valenté Models accepts applications from individuals aged 16 and above. All
+            models and talent under the age of 18 are represented exclusively under the
+            authority and written consent of a parent or legal guardian, who is involved
+            in and informed of every professional engagement. We apply strict protocols
+            to ensure the safety, comfort, and wellbeing of all minors we work with, at
+            every stage of their career.
+          </p>
+        </ScrollFadeIn>
+
+        <div className="border-t border-[#001F3F]/10" />
+
+        <ScrollFadeIn className="space-y-6" delay={150}>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Client Standards
           </h2>
           <p className="text-sm leading-8 text-[#001F3F]">
@@ -89,8 +105,8 @@ export default function EthicsPage() {
 
         <div className="border-t border-[#001F3F]/10" />
 
-        <ScrollFadeIn className="space-y-6" delay={150}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+        <ScrollFadeIn className="space-y-6" delay={160}>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Reporting & Accountability
           </h2>
           <p className="text-sm leading-8 text-[#001F3F]">

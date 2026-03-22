@@ -6,10 +6,10 @@ export default function TermsPage() {
 
       {/* ── Header ── */}
       <ScrollFadeIn className="mb-20 border-b border-[#001F3F] pb-16 md:mb-28 md:pb-20">
-        <p className="mb-5 text-[0.65rem] font-semibold uppercase tracking-[0.5em] text-[#001F3F]">
+        <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
           Legal
         </p>
-        <h1 className="max-w-3xl font-sans text-xl font-medium leading-tight tracking-[0.2em] uppercase text-[#001F3F] md:text-2xl">
+        <h1 className="max-w-3xl font-sans text-2xl font-semibold leading-tight tracking-[0.1em] uppercase text-[#001F3F] md:text-3xl">
           Terms & Legal Notice
         </h1>
         <p className="mt-6 text-[0.65rem] uppercase tracking-[0.3em] text-[#001F3F]/50">
@@ -19,9 +19,8 @@ export default function TermsPage() {
 
       <div className="mx-auto w-full max-w-3xl space-y-20">
 
-        {/* ── Legal Notice ── */}
         <ScrollFadeIn className="space-y-6" delay={100}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Legal Notice
           </h2>
           <div className="space-y-4 text-sm leading-8 text-[#001F3F]">
@@ -42,9 +41,8 @@ export default function TermsPage() {
 
         <div className="border-t border-[#001F3F]/10" />
 
-        {/* ── Use of Website ── */}
         <ScrollFadeIn className="space-y-6" delay={110}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Use of This Website
           </h2>
           <div className="space-y-4 text-sm leading-8 text-[#001F3F]">
@@ -66,9 +64,8 @@ export default function TermsPage() {
 
         <div className="border-t border-[#001F3F]/10" />
 
-        {/* ── Applications ── */}
         <ScrollFadeIn className="space-y-6" delay={120}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Model & Talent Applications
           </h2>
           <div className="space-y-4 text-sm leading-8 text-[#001F3F]">
@@ -83,10 +80,15 @@ export default function TermsPage() {
               discretion, and we are not obligated to respond to every submission.
             </p>
             <p>
-              Applicants must be 18 years of age or older to submit independently. If you are
-              between 16 and 18 years old, a parent or legal guardian must provide written
-              consent alongside your application. Applications from individuals under 16 years
-              of age will not be considered.
+              Applicants must be 16 years of age or older to submit an application. Applicants
+              between the ages of 16 and 18 must have the written consent of a parent or legal
+              guardian, who assumes full responsibility for the minor throughout any working
+              relationship with Valenté Models. Any contract signed with a minor will require
+              the co-signature of their parent or legal guardian, in accordance with French law.
+            </p>
+            <p>
+              Applications from individuals under 16 years of age will not be considered under
+              any circumstances.
             </p>
             <p>
               By submitting photographs, you confirm that you hold the rights to those images
@@ -98,9 +100,8 @@ export default function TermsPage() {
 
         <div className="border-t border-[#001F3F]/10" />
 
-        {/* ── Data & Privacy ── */}
         <ScrollFadeIn className="space-y-6" delay={130}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Personal Data & Privacy
           </h2>
           <div className="space-y-4 text-sm leading-8 text-[#001F3F]">
@@ -131,9 +132,8 @@ export default function TermsPage() {
 
         <div className="border-t border-[#001F3F]/10" />
 
-        {/* ── Intellectual Property ── */}
         <ScrollFadeIn className="space-y-6" delay={140}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Intellectual Property
           </h2>
           <div className="space-y-4 text-sm leading-8 text-[#001F3F]">
@@ -151,9 +151,8 @@ export default function TermsPage() {
 
         <div className="border-t border-[#001F3F]/10" />
 
-        {/* ── Limitation of Liability ── */}
         <ScrollFadeIn className="space-y-6" delay={150}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Limitation of Liability
           </h2>
           <div className="space-y-4 text-sm leading-8 text-[#001F3F]">
@@ -173,9 +172,8 @@ export default function TermsPage() {
 
         <div className="border-t border-[#001F3F]/10" />
 
-        {/* ── Governing Law ── */}
         <ScrollFadeIn className="space-y-6" delay={160}>
-          <h2 className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
             Governing Law
           </h2>
           <div className="space-y-4 text-sm leading-8 text-[#001F3F]">
