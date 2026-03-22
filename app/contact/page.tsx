@@ -17,9 +17,7 @@ export default function ContactPage() {
       <ScrollFadeIn className="grid grid-cols-1 gap-8 md:grid-cols-12" delay={100}>
         <div className="space-y-4 md:col-span-5">
           <p className="text-[0.62rem] uppercase tracking-[0.2em] text-black/60">Office</p>
-          <p className="text-sm uppercase tracking-[0.12em]">182 Rue de Rivoli, Paris, 75001 France</p>
-          <p className="text-sm uppercase tracking-[0.12em]">+33 (0)1 4020 1515</p>
-          <p className="text-sm uppercase tracking-[0.12em]">contact@valenteparis.com</p>
+          <p className="text-sm uppercase tracking-[0.12em]">valentepariscontact@gmail.com</p>
 
           <div className="space-y-3 border-t border-black pt-5">
             {departments.map((dept) => (

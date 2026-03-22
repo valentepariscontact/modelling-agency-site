@@ -1,3 +1,4 @@
+
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import Link from "next/link";
 
@@ -6,11 +7,11 @@ export default function AboutPage() {
     <main className="flex w-full flex-col pb-24 pt-16 md:pt-24">
 
       {/* ── Header ── */}
-      <ScrollFadeIn className="mb-20 border-b border-[#001F3F]/10 pb-16 md:mb-28 md:pb-20">
-        <p className="mb-5 text-[0.65rem] uppercase tracking-[0.5em] text-[#001F3F]/60">
+      <ScrollFadeIn className="mb-20 border-b border-[#001F3F] pb-16 md:mb-28 md:pb-20">
+        <p className="mb-5 text-[0.65rem] uppercase tracking-[0.5em] text-[#001F3F]">
           About
         </p>
-        <h1 className="max-w-3xl font-sans text-2xl font-light leading-tight tracking-[0.15em] uppercase text-[#001F3F] md:text-3xl">
+        <h1 className="max-w-3xl font-sans text-xl font-medium leading-tight tracking-[0.2em] uppercase text-[#001F3F] md:text-2xl">
           A different kind of agency.
         </h1>
       </ScrollFadeIn>
@@ -18,7 +19,7 @@ export default function AboutPage() {
       {/* ── Story ── */}
       <ScrollFadeIn className="mb-24 grid grid-cols-1 gap-16 md:mb-32 md:grid-cols-2 md:gap-24" delay={100}>
         <div>
-          <p className="mb-6 text-[0.65rem] uppercase tracking-[0.4em] text-[#001F3F]/60">
+          <p className="mb-6 text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
             Who We Are
           </p>
           <p className="text-sm leading-8 text-[#001F3F]">
@@ -27,7 +28,7 @@ export default function AboutPage() {
           </p>
         </div>
         <div>
-          <p className="mb-6 text-[0.65rem] uppercase tracking-[0.4em] text-[#001F3F]/60">
+          <p className="mb-6 text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
             Why We Exist
           </p>
           <p className="text-sm leading-8 text-[#001F3F]">
@@ -41,10 +42,10 @@ export default function AboutPage() {
 
       {/* ── Values ── */}
       <ScrollFadeIn className="mb-24 md:mb-32" delay={140}>
-        <p className="mb-12 text-[0.65rem] uppercase tracking-[0.4em] text-[#001F3F]/60">
+        <p className="mb-12 text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-[#001F3F]">
           Our Commitments
         </p>
-        <div className="grid grid-cols-1 divide-y divide-[#001F3F]/10 border-y border-[#001F3F]/10 md:grid-cols-3 md:divide-x md:divide-y-0">
+        <div className="grid grid-cols-1 divide-y divide-[#001F3F]/20 border-y border-[#001F3F]/20 md:grid-cols-3 md:divide-x md:divide-y-0">
           {[
             {
               title: "Wellbeing First",
@@ -60,7 +61,7 @@ export default function AboutPage() {
             },
           ].map((v) => (
             <div key={v.title} className="py-10 md:px-10 md:first:pl-0 md:last:pr-0">
-              <h3 className="mb-5 text-[0.65rem] uppercase tracking-[0.3em] text-[#001F3F]">
+              <h3 className="mb-5 text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#001F3F]">
                 {v.title}
               </h3>
               <p className="text-sm leading-7 text-[#001F3F]">{v.body}</p>
@@ -87,7 +88,7 @@ export default function AboutPage() {
         </Link>
         <Link
           href="/contact"
-          className="text-[10px] uppercase tracking-[0.3em] text-[#001F3F]/60 underline underline-offset-4 hover:text-[#001F3F] transition-colors"
+          className="text-[10px] uppercase tracking-[0.3em] text-[#001F3F] underline underline-offset-4 hover:opacity-60 transition-opacity"
         >
           Contact
         </Link>
