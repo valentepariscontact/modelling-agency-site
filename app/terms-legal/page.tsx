@@ -30,7 +30,7 @@ export default function TermsPage() {
               of completing its formal registration as a licensed agency under French law.
             </p>
             <p>
-              Contact: <a href="mailto:contact@valentemodels.com" className="underline underline-offset-4">contact@valentemodels.com</a>
+              Contact: <a href="valentepariscontact@gmail.com" className="underline underline-offset-4">valentepariscontact@gmail.com</a>
             </p>
             <p>
               Publication Director: Valenté Models<br />
