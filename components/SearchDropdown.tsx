@@ -4,12 +4,11 @@ import { FormEvent, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const categories = [
-  { label: "ALL", value: "all", href: "/models" },
-  { label: "WOMEN", value: "women", href: "/women" },
-  { label: "MEN", value: "men", href: "/men" },
-  { label: "NON-BINARY", value: "non-binary", href: "/non-binary" },
-  { label: "TALENT", value: "talent", href: "/talent" },
-  { label: "NEWS", value: "news", href: "/news" },
+  { label: "ABOUT US", value: "about", href: "/about" },
+  { label: "JOIN US", value: "join", href: "/#get-scouted" },
+  { label: "CONTACT", value: "contact", href: "/contact" },
+  { label: "TERMS & LEGAL", value: "terms", href: "/terms-legal" },
+  { label: "ETHICS CODE", value: "ethics", href: "/ethics-code" },
 ];
 
 type SearchDropdownProps = {
