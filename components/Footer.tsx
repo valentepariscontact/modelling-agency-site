@@ -15,8 +15,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="mailto:contact@valenteparis.com" className="inline-block leading-none transition-opacity hover:opacity-65">
-                contact@valenteparis.com
+              <Link href="mailto: valentepariscontact@gmail.com" className="inline-block leading-none transition-opacity hover:opacity-65">
+                 valentepariscontact@gmail.com
               </Link>
             </li>
           </ul>

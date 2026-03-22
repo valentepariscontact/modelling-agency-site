@@ -117,8 +117,8 @@ export default function EthicsPage() {
           </p>
           <p className="text-sm leading-8 text-[#001F3F]">
             Contact:{" "}
-            <a href="mailto:contact@valentemodels.com" className="underline underline-offset-4">
-              contact@valentemodels.com
+            <a href="mailto: valentepariscontact@gmail.com" className="underline underline-offset-4">
+               valentepariscontact@gmail.com
             </a>
           </p>
         </ScrollFadeIn>
