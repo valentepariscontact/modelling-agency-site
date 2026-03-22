@@ -94,7 +94,7 @@ export default function Home() {
   return (
     <main className="-mx-4 flex w-screen flex-col md:-mx-8 lg:-mx-10">
       <HeroVideo
-        title="Valenté Paris"
+        title="Valenté"
         subtitle="Model Agency"
         videoUrl="https://player.vimeo.com/external/434045526.sd.mp4?s=e99f8dbf0278f6184cfef97d65cb658649b57f84&profile_id=164&oauth2_token_id=57447761"
       />
