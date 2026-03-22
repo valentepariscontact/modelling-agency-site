@@ -156,8 +156,8 @@ export default function Home() {
                     <input value={data.Height_CM} onChange={(e) => field("Height_CM", e.target.value)} type="text" placeholder="HEIGHT (CM)" required className={inp} />
                     <select value={data.Gender} onChange={(e) => field("Gender", e.target.value)} required className={`${inp} appearance-none`}>
                       <option value="" disabled>SEX</option>
-                      <option value="Woman">WOMAN</option>
-                      <option value="Man">MAN</option>
+                      <option value="Female">FEMALE</option>
+                      <option value="Male">MALE</option>
                       <option value="Non-Binary">NON-BINARY</option>
                     </select>
                   </div>
