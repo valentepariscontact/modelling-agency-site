@@ -46,8 +46,8 @@ export default function Footer() {
             <Image 
               src="/logo.svg" 
               alt="Valenté Models" 
-              width={200} 
-              height={150} 
+              width={300} 
+              height={225} 
               className="h-auto w-[160px] md:w-[180px] lg:w-[200px]"
               priority
             />
