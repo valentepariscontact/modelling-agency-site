@@ -49,7 +49,7 @@ export default function Header() {
         >
           <div className="relative">
             <Image
-              src="/logo.svg" 
+              src="/logo2.svg" 
               alt="Valenté Models"
               // Substantially increased size for legibility
               width={240} 
