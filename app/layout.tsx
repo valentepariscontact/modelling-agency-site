@@ -20,12 +20,14 @@ const brandDisplay = Cormorant_Garamond({
   weight: ["400", "500"],
 });
 
-export const metadata: Metadata = {
-  title: "Valenté",
-  description: "Valenté Paris — high-fashion modelling agency",
+// app/layout.tsx
+
+export const metadata = {
+  title: "Valenté Models",
+  description: "Model Agency",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo2.svg", // Chemin vers ton logo dans le dossier public
+    apple: "/logo2.svg", // Pour l'icône sur l'écran d'accueil iPhone
   },
 };
 
