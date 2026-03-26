@@ -22,12 +22,18 @@ const brandDisplay = Cormorant_Garamond({
 
 // app/layout.tsx
 
+// app/layout.tsx
+
 export const metadata = {
-  title: "Valenté Models",
-  description: "Model Agency",
+  // ... tes autres metas (title, description)
   icons: {
-    icon: "/logo2.svg", // Chemin vers ton logo dans le dossier public
-    apple: "/logo2.svg", // Pour l'icône sur l'écran d'accueil iPhone
+    icon: [
+      { url: '/logo2.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: ['/logo2.svg'],
+    apple: [
+      { url: '/logo2.svg' },
+    ],
   },
 };
 
