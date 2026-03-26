@@ -50,8 +50,8 @@ export default function Header() {
             <Image
               src="/logo.svg"
               alt="Valenté Models"
-              width={52}
-              height={52}
+              width={62}
+              height={62}
               className="object-contain"
               priority
             />
