@@ -14,17 +14,18 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
+    // Increased vertical padding (py-6) for a more "prestigious" feel
     <header className="sticky top-0 z-[60] border-b border-[#001F3F]/10 bg-white text-[#001F3F] transition-colors duration-500">
-      <div className="mx-auto grid w-full max-w-[1560px] grid-cols-1 gap-4 px-4 py-4 md:grid-cols-[1fr_auto] md:items-center md:px-8 md:py-5 lg:grid-cols-[1.4fr_auto_1fr] lg:px-10">
+      <div className="mx-auto grid w-full max-w-[1800px] grid-cols-1 items-center gap-6 px-6 py-6 md:grid-cols-[1fr_auto] md:px-10 md:py-8 lg:grid-cols-[1fr_auto_1fr] lg:px-12">
 
-        {/* Nav links */}
-        <nav aria-label="Primary" className="order-2 overflow-x-auto lg:order-1">
-          <ul className="flex min-w-max items-center gap-x-5 gap-y-2 font-sans text-[0.6rem] uppercase tracking-[0.24em] md:text-[0.64rem]">
+        {/* Nav links - Left side */}
+        <nav aria-label="Primary" className="order-2 lg:order-1">
+          <ul className="flex min-w-max items-center gap-x-8 font-sans text-[0.7rem] uppercase tracking-[0.24em] md:text-[0.75rem]">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`relative inline-block py-1 leading-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-[#001F3F] after:transition-all after:duration-300 hover:after:w-full ${
+                  className={`relative inline-block py-1 leading-none after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-[#001F3F] after:transition-all after:duration-300 hover:after:w-full ${
                     pathname === link.href ? "after:w-full" : ""
                   }`}
                 >
@@ -35,29 +36,28 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Search */}
+        {/* Search - Center */}
         <div className="order-3 lg:order-2 lg:justify-self-center">
           <SearchDropdown dark={false} />
         </div>
 
-        {/* Logo */}
+        {/* Logo - Right side */}
         <Link
           href="/"
           aria-label="Go to homepage"
-          className="order-1 justify-self-end lg:order-3"
+          className="order-1 flex justify-end lg:order-3"
         >
-          <div className="flex flex-col items-center leading-none">
+          {/* Removed flex-col and the span below to clear space */}
+          <div className="relative">
             <Image
               src="/logo.svg"
               alt="Valenté Models"
-              width={62}
-              height={62}
+              // Increased size from 62 to 100
+              width={100} 
+              height={100}
               className="object-contain"
               priority
             />
-            <span className="mt-1 font-sans text-[0.5rem] uppercase tracking-[0.3em] text-[#001F3F]/60">
-               
-            </span>
           </div>
         </Link>
 
