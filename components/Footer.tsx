@@ -1,12 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black">
-      <div className="mx-auto grid w-full max-w-[1560px] gap-10 px-4 py-14 md:grid-cols-2 md:gap-12 md:px-8 md:py-16 lg:px-10">
+    <footer className="border-t border-black bg-white">
+      <div className="mx-auto grid w-full max-w-[1800px] gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:px-8 md:py-16 lg:px-10">
 
         {/* Contact */}
-        <nav aria-label="Contact" className="space-y-4">
+        <nav aria-label="Contact" className="space-y-6">
           <p className="text-[0.58rem] uppercase tracking-[0.24em] text-black/55">Contact</p>
           <ul className="space-y-4 text-[0.64rem] uppercase tracking-[0.19em]">
             <li>
@@ -15,15 +16,15 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="mailto: valentepariscontact@gmail.com" className="inline-block leading-none transition-opacity hover:opacity-65">
-                 valentepariscontact@gmail.com
+              <Link href="mailto:valentepariscontact@gmail.com" className="inline-block leading-none transition-opacity hover:opacity-65">
+                valentepariscontact@gmail.com
               </Link>
             </li>
           </ul>
         </nav>
 
         {/* Legal */}
-        <nav aria-label="Legal" className="space-y-4">
+        <nav aria-label="Legal" className="space-y-6">
           <p className="text-[0.58rem] uppercase tracking-[0.24em] text-black/55">Legal</p>
           <ul className="space-y-4 text-[0.64rem] uppercase tracking-[0.19em]">
             <li>
@@ -39,10 +40,24 @@ export default function Footer() {
           </ul>
         </nav>
 
+        {/* Logo - Down Right placement */}
+        <div className="flex items-start md:justify-end lg:items-center">
+          <Link href="/" className="transition-opacity hover:opacity-80">
+            <Image 
+              src="/logo.svg" 
+              alt="Valenté Models" 
+              width={200} 
+              height={150} 
+              className="h-auto w-[160px] md:w-[180px] lg:w-[200px]"
+              priority
+            />
+          </Link>
+        </div>
+
       </div>
 
       {/* Bottom bar */}
-      <div className="mx-auto w-full max-w-[1560px] border-t border-black/15 px-4 py-6 md:px-8 lg:px-10">
+      <div className="mx-auto w-full max-w-[1800px] border-t border-black/15 px-4 py-6 md:px-8 lg:px-10">
         <p className="text-[0.58rem] uppercase tracking-[0.18em] text-black/40">
           © {new Date().getFullYear()} Valenté. All rights reserved.
         </p>
