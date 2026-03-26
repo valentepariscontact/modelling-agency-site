@@ -48,7 +48,7 @@ export default function Header() {
         >
           <div className="flex flex-col items-center leading-none">
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="Valenté Models"
               width={52}
               height={52}
