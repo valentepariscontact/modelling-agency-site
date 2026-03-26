@@ -56,7 +56,7 @@ export default function Header() {
               priority
             />
             <span className="mt-1 font-sans text-[0.5rem] uppercase tracking-[0.3em] text-[#001F3F]/60">
-              Paris
+               
             </span>
           </div>
         </Link>
