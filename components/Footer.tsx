@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="mx-auto w-full max-w-[1800px] border-t border-black/15 px-4 py-6 md:px-8 lg:px-10">
+      <div className="mx-auto w-full max-w-[1800px] border-t border-white/20 px-4 py-6 md:px-8 lg:px-10">
         <p className="text-[0.58rem] uppercase tracking-[0.18em] text-black/40">
           © {new Date().getFullYear()} Valenté. All rights reserved.
         </p>
