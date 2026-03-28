@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/20 bg-[#001F3F]">
+    <footer className="border-t border-white/20 bg-black">
       <div className="mx-auto grid w-full max-w-[1800px] gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:px-8 md:py-16 lg:px-10">
         <nav aria-label="Contact" className="space-y-6">
           <p className="text-[0.58rem] uppercase tracking-[0.24em] text-white/55">Contact</p>
