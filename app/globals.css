@@ -26,7 +26,7 @@ h4,
 h5,
 h6 {
   @apply font-serif leading-[0.95] tracking-tight;
-  color: var(--marine-blue);
+
 }
 
 p,
