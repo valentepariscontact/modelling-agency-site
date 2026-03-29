@@ -152,6 +152,7 @@ export default function Home() {
                     <input value={data.First_Name} onChange={(e) => field("First_Name", e.target.value)} type="text" placeholder="FIRST NAME" required className={inp} />
                     <input value={data.Last_Name} onChange={(e) => field("Last_Name", e.target.value)} type="text" placeholder="LAST NAME" required className={inp} />
                     <input value={data.email} onChange={(e) => field("email", e.target.value)} type="email" placeholder="EMAIL" required className={`${inp} md:col-span-2`} />
+                    <input value={data.instagram} onChange={(e) => field("instagram", e.target.value)} type="text" placeholder="INSTAGRAM (OPTIONAL)" className={`${inp} md:col-span-2`} />
                     <input value={data.Age} onChange={(e) => field("Age", e.target.value)} type="number" placeholder="AGE" required className={inp} />
                     <input value={data.Country} onChange={(e) => field("Country", e.target.value)} type="text" placeholder="COUNTRY" required className={inp} />
                     <input value={data.Height_CM} onChange={(e) => field("Height_CM", e.target.value)} type="text" placeholder="HEIGHT (CM)" required className={inp} />
