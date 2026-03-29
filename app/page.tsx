@@ -26,7 +26,7 @@ type ScoutData = {
 const empty: ScoutData = {
   First_Name: "", Last_Name: "", email: "", Age: "", Country: "",
   Height_CM: "", Gender: "", Bust_CM: "", Waist_CM: "",
-  Hips_CM: "", Shoes: "", Eyes: "", Hair: "", Interest: "", instagram: "",
+  Hips_CM: "", Shoes: "", Eyes: "", Hair: "", Interest: "", instagram: "", instagram: "",
 };
 
 const photoLabels = ["Portrait", "Headshot", "Full_Figure", "Side_Profile"] as const;
