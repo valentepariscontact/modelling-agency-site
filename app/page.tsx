@@ -20,6 +20,7 @@ type ScoutData = {
   Eyes: string;
   Hair: string;
   Interest: string;
+  instagram: string;
 };
 
 const empty: ScoutData = {

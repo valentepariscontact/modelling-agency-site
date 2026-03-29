@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     const fields = [
       "First_Name", "Last_Name", "email", "Age", "Country", "Height_CM", "Gender",
       "Bust_CM", "Waist_CM", "Hips_CM", "Shoes", "Eyes", "Hair",
-      "Interest", "Consent_Data",
+      "instagram", "Interest", "Consent_Data",
     ] as const;
 
     const data: Record<string, string> = {};
