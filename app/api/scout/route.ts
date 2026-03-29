@@ -82,6 +82,7 @@ export async function POST(req: NextRequest) {
             <tr><td style="padding:8px 0; color:#001F3F99;">Eyes</td><td>${data.Eyes}</td></tr>
             <tr><td style="padding:8px 0; color:#001F3F99;">Hair</td><td>${data.Hair}</td></tr>
             <tr><td style="padding:8px 0; color:#001F3F99;">Interest</td><td>${data.Interest}</td></tr>
+            <tr><td style="padding:8px 0; color:#001F3F99;">Instagram</td><td>${data.instagram || "—"}</td></tr>
           </table>
           <h2 style="font-size:12px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; margin-top:32px; margin-bottom:8px;">
             Polaroids (${photoEntries.length})
