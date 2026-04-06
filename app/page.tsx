@@ -3,12 +3,12 @@
 import { useState } from "react";
 import HeroVideo from "@/components/HeroVideo";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
-import { models } from "@/lib/models";
 
 type ScoutData = {
   First_Name: string;
   Last_Name: string;
   email: string;
+  instagram: string;
   Age: string;
   Country: string;
   Height_CM: string;
@@ -20,17 +20,32 @@ type ScoutData = {
   Eyes: string;
   Hair: string;
   Interest: string;
-  instagram: string;
 };
 
 const empty: ScoutData = {
-  First_Name: "", Last_Name: "", email: "", Age: "", Country: "",
+  First_Name: "", Last_Name: "", email: "", instagram: "", Age: "", Country: "",
   Height_CM: "", Gender: "", Bust_CM: "", Waist_CM: "",
-  Hips_CM: "", Shoes: "", Eyes: "", Hair: "", Interest: "", instagram: "",
+  Hips_CM: "", Shoes: "", Eyes: "", Hair: "", Interest: "",
 };
 
 const photoLabels = ["Portrait", "Headshot", "Full_Figure", "Side_Profile"] as const;
 type PhotoLabel = (typeof photoLabels)[number];
+
+async function uploadToCloudinary(file: File): Promise<string> {
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("upload_preset", "valente_models");
+  formData.append("folder", "scout-applications");
+
+  const res = await fetch(
+    `https://api.cloudinary.com/v1_1/dknio4rry/image/upload`,
+    { method: "POST", body: formData }
+  );
+
+  if (!res.ok) throw new Error("Photo upload failed");
+  const data = await res.json();
+  return data.secure_url;
+}
 
 export default function Home() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -67,14 +82,21 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const body = new FormData();
-      (Object.keys(data) as (keyof ScoutData)[]).forEach((k) => body.append(k, data[k]));
-      body.append("Consent_Data", "yes");
-      photoLabels.forEach((label) => {
-        if (photos[label]) body.append("photos", photos[label]!, `${label}_${photos[label]!.name}`);
+      // Upload photos directly to Cloudinary from browser
+      const photoUrls: Record<string, string> = {};
+      for (const label of photoLabels) {
+        if (photos[label]) {
+          photoUrls[label] = await uploadToCloudinary(photos[label]!);
+        }
+      }
+
+      // Send form data + photo URLs to our API
+      const res = await fetch("/api/scout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, photoUrls }),
       });
 
-      const res = await fetch("/api/scout", { method: "POST", body });
       if (res.ok) {
         setIsSubmitted(true);
         setTimeout(() => { closeForm(); setIsSubmitted(false); }, 6000);
@@ -82,8 +104,8 @@ export default function Home() {
         const json = await res.json().catch(() => ({}));
         alert(json.error || "Submission failed. Please try again.");
       }
-    } catch {
-      alert("Network error. Please try again.");
+    } catch (err) {
+      alert("Submission failed. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -97,7 +119,7 @@ export default function Home() {
       <HeroVideo
         title="Valenté"
         subtitle="Model Agency"
-        videoUrl="https://player.vimeo.com/external/434045526.sd.mp4?s=e99f8dbf0278f6184cfef97d65cb658649b57f84&profile_id=164&oauth2_token_id=57447761"
+        videoUrl=""
       />
 
       <section id="get-scouted" className="bg-white py-20 px-4 md:px-8 lg:px-10 border-b border-[#001F3F]/5">
@@ -146,7 +168,6 @@ export default function Home() {
 
               <form onSubmit={handleSubmit} className="min-h-[400px] flex flex-col justify-between">
 
-                {/* Step 1 — Identity */}
                 {step === 1 && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-in fade-in duration-500">
                     <input value={data.First_Name} onChange={(e) => field("First_Name", e.target.value)} type="text" placeholder="FIRST NAME" required className={inp} />
@@ -165,7 +186,6 @@ export default function Home() {
                   </div>
                 )}
 
-                {/* Step 2 — Measurements */}
                 {step === 2 && (
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-8 animate-in fade-in duration-500">
                     <input value={data.Bust_CM} onChange={(e) => field("Bust_CM", e.target.value)} type="text" placeholder="BUST (CM)" className={inp} />
@@ -177,7 +197,6 @@ export default function Home() {
                   </div>
                 )}
 
-                {/* Step 3 — Polaroids */}
                 {step === 3 && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in duration-500">
                     {photoLabels.map((label) => (
@@ -212,7 +231,6 @@ export default function Home() {
                   </div>
                 )}
 
-                {/* Step 4 — Management */}
                 {step === 4 && (
                   <div className="space-y-12 animate-in fade-in duration-500">
                     <div className="space-y-4">
@@ -229,7 +247,6 @@ export default function Home() {
                   </div>
                 )}
 
-                {/* Step 5 — Agreement */}
                 {step === 5 && (
                   <div className="space-y-10 animate-in fade-in duration-500 max-w-2xl">
                     <div className="flex gap-6 items-start">
@@ -241,7 +258,6 @@ export default function Home() {
                   </div>
                 )}
 
-                {/* Navigation */}
                 <div className="flex gap-4 mt-12 pt-8 border-t border-[#001F3F]/10">
                   {step > 1 && !isSubmitting && (
                     <button type="button" onClick={() => setStep((s) => s - 1)} className="flex-1 bg-[#E5E5E5] text-[#001F3F] py-5 text-[10px] tracking-[0.3em] uppercase transition-colors">
